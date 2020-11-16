@@ -1,0 +1,18 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Delete Category</h1>
+
+    <% categories.each do |category| %>
+      <form method="POST" action="/categories/<%= category.id %>/submit_delete">
+        <label for="delete">Delete <b><%= category.name %></b> ?</label>
+        <input type="submit" name="delete_category" id="delete_category" value="Delete Category"/>  
+      </form>
+    <% end %>
+    
+    <br><br><a href="/categories"><button>Back</button></a>
+  </body>
+
+</html>

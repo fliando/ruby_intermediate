@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Item Details</h1>
+
+    <% details.each do |show|%>
+      <h2>Item Name: <%= show.name %></h2>
+      <h2>Item Price: IDR <%= (show.price).to_i %></h2>
+      <h2>Item Category: <%= show.category %></h2>
+    <% end %>
+		
+	</body>
+</html>

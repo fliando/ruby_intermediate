@@ -1,0 +1,29 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <% items.each do |item| %>
+        <h1>Edit <b><%= item.name %></b></h1>
+    
+        <form method="POST" action="/items/<%= item.id %>/submit_update">
+        <label for="item_name">Name:</label>
+        <input type="text" name="item_name" id="item_name" placeholder="<%= item.name %>"/>
+
+        <label for="price">Price:</label>
+        <input type="text" name="price" id="price" placeholder="<%= (item.price).to_i %>"/>
+
+        <label for="category">Category:</label>
+        <select name="category" id="category">  
+            <% categories.each do |category| %>
+                <option value="<%= category.id %>"><%= category.name %></option>
+            <% end %>
+        </select>
+    <% end %>
+    
+          <input type="submit" name="update_item" id="update_item" value="Update Item">
+         </form>
+
+  <br><br><a href="/items"><button>Back</button></a>
+  </body>
+</html>

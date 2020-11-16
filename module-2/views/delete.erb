@@ -1,0 +1,16 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Delete Item</h1>
+
+    <% things.each do |thing| %>
+      <form method="POST" action="/items/<%= thing.id %>/submit-delete">
+        <label for="delete">Delete <b><%= thing.name %></b> ?</label>
+        <input type="submit" name="delete-item" id="delete-item" value="Delete Item"/>  
+      </form>
+    <% end %>
+  </body>
+
+</html>

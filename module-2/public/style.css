@@ -1,0 +1,13 @@
+.yellow-background {
+  background-color: yellow;
+}
+
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.left-margin {
+  margin-left: 2px
+}

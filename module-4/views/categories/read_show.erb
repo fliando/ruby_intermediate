@@ -1,0 +1,37 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Category Details</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>ID</th>
+          <th>Items in the Category</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% category_details.each do |category|%>
+          <tr>
+            <td><%= category.name %></td>
+            <td><%= category.id %></td>
+            <td>
+              <% category.items.each do |item| %>
+                <%= item['name'] %><br>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    
+    <br><br><a href="/categories"><button>Back</button></a>
+	</body>
+</html>
+
+

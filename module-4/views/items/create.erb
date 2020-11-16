@@ -1,0 +1,27 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Create a New Item</h1>
+
+    <form method="POST" action="/items/submit_create">
+      <label for="item_name">Name:</label>
+      <input type="text" name="item_name" id="item_name" placeholder="Item name"/>
+
+      <label for="price">Price:</label>
+      <input type="text" name="price" id="price" placeholder="Item price"/>
+
+      <label for="category">Category:</label>
+      <select name="category" id="category">  
+        <% categories.each do |category| %>
+          <option value="<%= category.id %>"><%= category.name %></option>
+        <% end %>
+      </select>
+
+      <input type="submit" name="create_item" id="create_item" value="Add Item">
+    </form>
+    <br><br><a href="/items"><button>Back</button></a>
+  </body>
+
+</html>

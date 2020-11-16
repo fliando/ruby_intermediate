@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Item List</title>
+    <link rel="stylesheet" href="<%= url('style.css') %>"/>
+  </head>
+
+  <body>
+  <h1 class="yellow-background">Items</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% things.each do |thing| %>
+          <tr>
+            <td><%= thing.name %></td>
+            <td><%= thing.price %></td>
+            <td><a href="/items/<%= thing.id %>">Show</a></td>
+            <td><a href="/items/<%= thing.id %>/edit">Edit</a></td>
+            <td><a href="/items/<%= thing.id %>/delete"><button type="submit">Delete</button></a></td>
+          </tr>
+        <% end %>
+      </tbody>
+
+    </table>
+
+    <a href="/items/create">New Item</a>
+  </body>
+</html>

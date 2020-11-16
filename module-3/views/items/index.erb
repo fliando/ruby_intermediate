@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Item List</title>
+    <link rel="stylesheet" href="<%= URI('style.css') %>"/>
+  </head>
+
+  <body>
+  <h1 class="yellow-background">Menu Items</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Category</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% items.each do |item| %>
+          <tr>
+            <td><%= item.name %></td>
+            <td><%= item.price %></td>
+            <td><%= item.category %></td>
+            <td><a href="/items/<%= item.id %>">Show Details</a></td>
+            <td><a href="/items/<%= item.id %>/edit">Edit</a></td>
+            <td><a href="/items/<%= item.id %>/delete"><button type="submit">Delete</button></a></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <a href="/items/create">Create New Item</a>
+    <br><br><a href="/"><button>Back</button></a>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+<html>
+  <head>
+  </head>
+
+  <body>
+    <h1>Item Details</h1>
+
+    <% item_details.each do |detail|%>
+      <h2>Item Name: <%= detail.name %></h2>
+      <h2>Item Price: IDR <%= (detail.price).to_i %></h2>
+      <h2>Item Category: <%= detail.category %></h2>
+    <% end %>
+    
+    <br><br><a href="/items"><button>Back</button></a>
+	</body>
+</html>

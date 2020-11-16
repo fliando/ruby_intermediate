@@ -1,0 +1,21 @@
+.yellow-background {
+  background-color: yellow;
+}
+
+.dodgerblue-background {
+  background-color: dodgerblue;
+}
+
+.cyan-background {
+  background-color: cyan;
+}
+
+.divider{
+  width:5px;
+  height:auto;
+  display:inline-block;
+}
+
+.left-margin {
+  margin-left: 2px
+}
